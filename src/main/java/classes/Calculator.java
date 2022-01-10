@@ -2,22 +2,22 @@ package classes;
 
 public class Calculator {
 
+
     public void run() throws InterruptedException {
+        Add add = new Add();
         System.out.println(this.getClass().getClassLoader());
-        while (true){
-            Add add = new Add();
-            Multiply multiply = new Multiply();
+        Mod mod = new Mod();
+        mod.mod();
 
-            System.out.println(add.add());
-            System.out.println(Subtract.subtract());
+        Multiply multiply = new Multiply();
 
-            System.out.println(multiply.multiply());
-            Thread.sleep(1000);
-        }
+        System.out.println(add.add());
+        System.gc();
+        // System.out.println(Subtract.subtract());
+
+        //System.out.println(multiply.multiply());
+
+
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        Calculator calculator = new Calculator();
-        calculator.run();
-    }
 }
